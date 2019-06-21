@@ -1,6 +1,5 @@
 package nl.workingspirit.butterflies.config;
 
-import javafx.print.PageLayout;
 import nl.workingspirit.butterflies.model.Player;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
