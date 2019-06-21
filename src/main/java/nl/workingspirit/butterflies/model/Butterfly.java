@@ -1,4 +1,4 @@
-package nl.workingspirit.butterflies;
+package nl.workingspirit.butterflies.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
