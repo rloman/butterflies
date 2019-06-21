@@ -11,10 +11,16 @@ import java.util.Optional;
 @Service
 public class ButterflyService {
 
-    @Autowired
     private ButterflyRepository repo;
 
+    public ButterflyService(ButterflyRepository repo) {
+        this.repo = repo;
+    }
+
     public int add(int a, int b) {
+
+        Butterfly bu = new Butterfly();
+        int age = bu.getAge();
         return a+b;
     }
 
