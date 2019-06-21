@@ -1,5 +1,6 @@
 package nl.workingspirit.butterflies;
 
+import nl.workingspirit.butterflies.model.Butterfly;
 import nl.workingspirit.butterflies.services.ButterflyService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -38,6 +39,24 @@ public class ButterfliesServiceIT {
 		Assert.assertEquals(newLength, currentLength+1);
 
 
+	}
+
+	@Test
+	public void testTeamForEline() {
+		String name = service.getTeam().getEline().getName();
+		Assert.assertEquals("Eline", name);
+	}
+
+	@Test
+	public void testTeamForWietse() {
+		String name = service.getTeam().getWietse().getName();
+		Assert.assertEquals("Wietse", name);
+	}
+
+	@Test
+	public void testTeamForFrank() {
+		String name = service.getTeam().getFrank().getName();
+		Assert.assertEquals("Frank", name);
 	}
 
 

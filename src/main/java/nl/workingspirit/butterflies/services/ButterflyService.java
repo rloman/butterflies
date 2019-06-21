@@ -1,7 +1,8 @@
 package nl.workingspirit.butterflies.services;
 
-import nl.workingspirit.butterflies.Butterfly;
+import nl.workingspirit.butterflies.model.Butterfly;
 import nl.workingspirit.butterflies.ButterflyRepository;
+import nl.workingspirit.butterflies.model.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +12,12 @@ import java.util.Optional;
 @Service
 public class ButterflyService {
 
+    @Autowired
     private ButterflyRepository repo;
 
-    public ButterflyService(ButterflyRepository repo) {
-        this.repo = repo;
-    }
+    @Autowired
+    private Team team;
+
 
     public int add(int a, int b) {
 
@@ -62,5 +64,9 @@ public class ButterflyService {
 
     public void deleteAll() {
         repo.deleteAll();
+    }
+
+    public Team getTeam() {
+        return team;
     }
 }

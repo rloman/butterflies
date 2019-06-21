@@ -1,5 +1,6 @@
 package nl.workingspirit.butterflies;
 
+import nl.workingspirit.butterflies.model.Butterfly;
 import nl.workingspirit.butterflies.services.ButterflyService;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,8 +78,4 @@ abstract class MOckRepo implements ButterflyRepository {
 
     }
 
-    @Override
-    public void setAgeOfAllButterfliesToZero() {
-
-    }
 }
