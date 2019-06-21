@@ -1,18 +1,19 @@
 package nl.workingspirit.butterflies;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name="vlinder")
 public class Butterfly {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+
+    @Column(name="naam")
     private String name;
+
+
     private int age;
 
     public long getId() {
